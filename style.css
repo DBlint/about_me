@@ -1,0 +1,13 @@
+
+p {
+  color: black;
+}
+
+.question {
+  color: green;
+  font-weight: bold;
+}
+
+.answer {
+  color: blue;
+}
