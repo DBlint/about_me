@@ -10,7 +10,7 @@ var a1 = prompt(q1).toUpperCase();
 var a2 = prompt(q2).toUpperCase();
 var a3 = prompt(q3).toUpperCase();
 var a4 = prompt(q4).toUpperCase();
-var q5 = prompt(q5).toUpperCase();
+var a5 = prompt(q5).toUpperCase();
 
 var text1, text2, text3, text4, text5;
 
@@ -62,11 +62,11 @@ else {
 if (a4 === 'YES' || a4 === 'Y')
   {
   text4 = document.getElementById('answer4');
-  text4.textContent = 'Hell yeah!  My daughter is 19 and currently attending WSU!.';
+  text4.textContent = 'Hell yeah!  My daughter is 19 and currently attending WSU!';
 }
 else if (a4 === 'NO' || a4 === 'N'){
   text4 = document.getElementById('answer4');
-  text4.textContent = 'Actually, my 19 year old daughter is at WSU now!.';
+  text4.textContent = 'Actually, my 19 year old daughter is at WSU now!';
 }
 else {
   alert('Please enter Y/N or Yes/No for an answer.');
@@ -77,11 +77,11 @@ else {
 if (a5 === 'YES' || a5 === 'Y')
   {
   text5 = document.getElementById('answer5');
-  text5.textContent = 'You are right! I have been married to my wife for 21 years.';
+  text5.textContent = 'Yes I have.  I have set foot in Mexico, Spain, Afghanistan, Iraq, Kyrgyzstan, Ireland, Kuwait, and Canada.';
 }
 else if (a1 === 'NO' || a1 === 'N'){
   text5 = document.getElementById('answer5');
-  text5.textContent = 'NOPE! I have actually been married to my wife for 21 years.';
+  text5.textContent = 'Actually, my time in the Army allowed me to visit several countries.';
 }
 else {
   alert('Please enter Y/N or Yes/No for an answer.');
