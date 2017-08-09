@@ -1,106 +1,125 @@
 'use strict';
 
-var question1 = 'Am I married?';
-var question2 = 'Do I have kids?';
-var question3 = 'Did I play sports in school?';
-var question4 = 'Are my kids out of the house?';
-var question5 = 'Have I ever been out of the country?';
+var marriedQ = 'Am I married?';
+var haveKidsQ = 'Do I have kids?';
+var schoolSportsQ = 'Did I play sports in school?';
+var kidsGoneQ = 'Are my kids out of the house?';
+var outOfCountryQ = 'Have I ever been out of the country?';
 
+var correctAnswers = 0;
 var guestName = prompt('Please enter your name!');
-var answer1 = prompt(question1).toUpperCase();
-console.log('Answer1 = ' + answer1);
-var answer2 = prompt(question2).toUpperCase();
-console.log('Answer2 = ' + answer2);
-var answer3 = prompt(question3).toUpperCase();
-console.log('Answer3 = ' + answer3);
-var answer4 = prompt(question4).toUpperCase();
-console.log('Answer4 = ' + answer4);
-var answer5 = prompt(question5).toUpperCase();
-console.log('Answer5 = ' + answer5);
-
 var text1, text2, text3, text4, text5;
-
-if (answer1 === 'YES' || answer1 === 'Y')
+//Question Number 1
+var marriedAns = prompt(marriedQ);
+console.log('Answer1 = ' + marriedAns);
+if (marriedAns.toUpperCase() === 'YES' || marriedAns.toUpperCase() === 'Y')
   {
-  alert('You are right! ' + guestName + ' I have been married to my wife for 21 years.');
-  text1 = document.getElementById('answer1');
+  alert('You are right ' + guestName + '! I have been married to my wife for 21 years.');
+  text1 = document.getElementById('marriedAns');
   text1.textContent = 'You are right! I have been married to my wife for 21 years.';
 }
-else if (answer1 === 'NO' || answer1 === 'N'){
+else if (marriedAns.toUpperCase() === 'NO' || marriedAns.toUpperCase() === 'N'){
   alert('NO WAY ' + guestName.toUpperCase() + '! I have actually been married to my wife for 21 years.');
-  text1 = document.getElementById('answer1');
+  text1 = document.getElementById('marriedAns');
   text1.textContent = 'NOPE! I have actually been married to my wife for 21 years.';
 }
 else {
   alert('Please enter Y/N or Yes/No for an answer.');
-  text1 = document.getElementById('answer1');
+  text1 = document.getElementById('marriedAns');
   text1.textContent = 'You have not entered your answer in the proper format.';
 }
-
-if (answer2 === 'YES' || answer2 === 'Y')
+//Question Number 2
+var haveKidsAns = prompt(haveKidsQ);
+console.log('Answer2 = ' + haveKidsAns);
+if (haveKidsAns.toUpperCase() === 'YES' || haveKidsAns.toUpperCase() === 'Y')
   {
   alert('You are correct ' + guestName + '!  I have a son and a daughter.');
-  text2 = document.getElementById('answer2');
+  text2 = document.getElementById('haveKidsAns');
   text2.textContent = 'You are correct ' + guestName + '! I have a son and a daughter.';
 }
-else if (answer2 === 'NO' || answer2 === 'N'){
+else if (haveKidsAns.toUpperCase() === 'NO' || haveKidsAns.toUpperCase() === 'N'){
   alert('NO WAY ' + guestName.toUpperCase() + '! I have have 2 children.  A son and a daughter.');
-  text2 = document.getElementById('answer2');
+  text2 = document.getElementById('haveKidsAns');
   text2.textContent = 'NOPE! I have have 2 children.  A son and a daughter.';
 }
 else {
   alert('Please enter Y/N or Yes/No for an answer.');
-  text2 = document.getElementById('answer2');
+  text2 = document.getElementById('haveKidsAns');
   text2.textContent = 'You have not entered your answer in the proper format.';
 }
-
-if (answer3 === 'YES' || answer3 === 'Y')
+//Question Number 3
+var schoolSportsAns = prompt(schoolSportsQ);
+console.log('Answer3 = ' + schoolSportsAns);
+if (schoolSportsAns.toUpperCase() === 'YES' || schoolSportsAns.toUpperCase() === 'Y')
   {
-  alert('Sorry to disappoint you . ' + guestName + ' I did not participate in school sports.');
-  text3 = document.getElementById('answer3');
+  alert('Sorry to disappoint you ' + guestName + '.  I did not participate in school sports.');
+  text3 = document.getElementById('schoolSportsAns');
   text3.textContent = 'Sorry to disappoint.  I did not participate in school sports.';
 }
-else if (answer3 === 'NO' || answer3 === 'N'){
+else if (schoolSportsAns.toUpperCase() === 'NO' || schoolSportsAns.toUpperCase() === 'N'){
   alert('Affirmative ' + guestName + '! I did not participate in school sports.');
-  text3 = document.getElementById('answer3');
+  text3 = document.getElementById('schoolSportsAns');
   text3.textContent = 'Affirmative!  I did not participate in school sports.';
 }
 else {
   alert('Please enter Y/N or Yes/No for an answer.');
-  text3 = document.getElementById('answer3');
+  text3 = document.getElementById('schoolSportsAns');
   text3.textContent = 'You have not entered your answer in the proper format.';
 }
-
-if (answer4 === 'YES' || answer4 === 'Y')
+//Question Number 4
+var kidsGoneAns = prompt(kidsGoneQ);
+console.log('Answer4 = ' + kidsGoneAns);
+if (kidsGoneAns.toUpperCase() === 'YES' || kidsGoneAns.toUpperCase() === 'Y')
   {
   alert('Hell yeah ' + guestName + '! My daughter is 19 and currently attending WSU!');
-  text4 = document.getElementById('answer4');
+  text4 = document.getElementById('kidsGoneAns');
   text4.textContent = 'Hell yeah!  My daughter is 19 and currently attending WSU!';
 }
-else if (answer4 === 'NO' || answer4 === 'N'){
+else if (kidsGoneAns.toUpperCase() === 'NO' || kidsGoneAns.toUpperCase() === 'N'){
   alert('Actually ' + guestName + ', my 19 year old daughter is at WSU now!');
-  text4 = document.getElementById('answer4');
+  text4 = document.getElementById('kidsGoneAns');
   text4.textContent = 'Actually, my 19 year old daughter is at WSU now!';
 }
 else {
   alert('Please enter Y/N or Yes/No for an answer.');
-  text4 = document.getElementById('answer4');
+  text4 = document.getElementById('kidsGoneAns');
   text4.textContent = 'You have not entered your answer in the proper format.';
 }
-
-if (answer5 === 'YES' || answer5 === 'Y')
+//Question Number 5
+var outOfCountryAns = prompt(outOfCountryQ);
+console.log('Answer5 = ' + haveKidsAns);
+if (outOfCountryAns.toUpperCase() === 'YES' || outOfCountryAns.toUpperCase() === 'Y')
   {
   alert('Yes  ' + guestName + ', I have.  I have set foot in Mexico, Spain, Afghanistan, Iraq, Kyrgyzstan, Ireland, Kuwait, and Canada.');
-  text5 = document.getElementById('answer5');
+  text5 = document.getElementById('outOfCountryAns');
   text5.textContent = 'Yes I have.  I have set foot in Mexico, Spain, Afghanistan, Iraq, Kyrgyzstan, Ireland, Kuwait, and Canada.';
 }
-else if (answer5 === 'NO' || answer5 === 'N'){
+else if (outOfCountryAns.toUpperCase() === 'NO' || outOfCountryAns.toUpperCase() === 'N'){
   alert('Actually ' + guestName + ', my time in the Army allowed me to visit several countries.');
-  text5 = document.getElementById('answer5');
+  text5 = document.getElementById('outOfCountryAns');
   text5.textContent = 'Actually, my time in the Army allowed me to visit several countries.';
 }
 else {
   alert('Please enter Y/N or Yes/No for an answer.');
-  text5 = document.getElementById('answer5');
+  text5 = document.getElementById('outOfCountryAns');
   text5.textContent = 'You have not entered your answer in the proper format.';
 }
+//Question Number 6
+var targetNum =  5; //Math.floor(Math.random() * 10) + 1;
+var guessCount = 0;
+var guess;
+while (guess !== targetNum && guessCount < 4)
+{
+  guess = prompt('Can you read my mind?  Please guess a number between 1 and 10');
+  console.log('User guess: ' + guess);
+  guessCount++;
+  console.log('Current Guess: ' + guessCount);
+  if (guess.parseInt() === targetNum)
+  {
+    alert('Congratulations!!! You must be psychic!!')
+    correctAnswers++;
+  }
+}
+//Question Number 7
+
+//Score
