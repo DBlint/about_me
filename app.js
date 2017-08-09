@@ -21,10 +21,12 @@ var text1, text2, text3, text4, text5;
 
 if (answer1 === 'YES' || answer1 === 'Y')
   {
+  alert('You are right! I have been married to my wife for 21 years.');
   text1 = document.getElementById('answer1');
   text1.textContent = 'You are right! I have been married to my wife for 21 years.';
 }
 else if (answer1 === 'NO' || answer1 === 'N'){
+  alert('NOPE! I have actually been married to my wife for 21 years.');
   text1 = document.getElementById('answer1');
   text1.textContent = 'NOPE! I have actually been married to my wife for 21 years.';
 }
@@ -36,10 +38,12 @@ else {
 
 if (answer2 === 'YES' || answer2 === 'Y')
   {
+  alert('You are correct!  I have a son and a daughter.');
   text2 = document.getElementById('answer2');
   text2.textContent = 'You are correct!  I have a son and a daughter.';
 }
 else if (answer2 === 'NO' || answer2 === 'N'){
+  alert('NOPE! I have have 2 children.  A son and a daughter.');
   text2 = document.getElementById('answer2');
   text2.textContent = 'NOPE! I have have 2 children.  A son and a daughter.';
 }
@@ -51,10 +55,12 @@ else {
 
 if (answer3 === 'YES' || answer3 === 'Y')
   {
+  alert('Sorry to disappoint.  I did not participate in school sports.');
   text3 = document.getElementById('answer3');
   text3.textContent = 'Sorry to disappoint.  I did not participate in school sports.';
 }
 else if (answer3 === 'NO' || answer3 === 'N'){
+  alert('Affirmative!  I did not participate in school sports.');
   text3 = document.getElementById('answer3');
   text3.textContent = 'Affirmative!  I did not participate in school sports.';
 }
@@ -66,10 +72,12 @@ else {
 
 if (answer4 === 'YES' || answer4 === 'Y')
   {
+  alert('Hell yeah!  My daughter is 19 and currently attending WSU!');
   text4 = document.getElementById('answer4');
   text4.textContent = 'Hell yeah!  My daughter is 19 and currently attending WSU!';
 }
 else if (answer4 === 'NO' || answer4 === 'N'){
+  alert('Actually, my 19 year old daughter is at WSU now!');
   text4 = document.getElementById('answer4');
   text4.textContent = 'Actually, my 19 year old daughter is at WSU now!';
 }
@@ -81,10 +89,12 @@ else {
 
 if (answer5 === 'YES' || answer5 === 'Y')
   {
+  alert('Yes I have.  I have set foot in Mexico, Spain, Afghanistan, Iraq, Kyrgyzstan, Ireland, Kuwait, and Canada.');
   text5 = document.getElementById('answer5');
   text5.textContent = 'Yes I have.  I have set foot in Mexico, Spain, Afghanistan, Iraq, Kyrgyzstan, Ireland, Kuwait, and Canada.';
 }
 else if (answer5 === 'NO' || answer5 === 'N'){
+  alert('Actually, my time in the Army allowed me to visit several countries.');
   text5 = document.getElementById('answer5');
   text5.textContent = 'Actually, my time in the Army allowed me to visit several countries.';
 }
