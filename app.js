@@ -152,6 +152,8 @@ while (stateGuessQty < 6 && !answeredCorrectly)
 {
   var stateGuess = prompt('Try to guess one of the other states I have lived in.');
   console.log('User State Input: ' + stateGuess);
+  stateGuessQty++;
+  console.log('Number of Attempts-States: ' + stateGuessQty);
   for (var i = 0; i < possAnswers.length; i++)
   {
     if (stateGuess.toLowerCase() === possAnswers[i])
@@ -168,15 +170,15 @@ while (stateGuessQty < 6 && !answeredCorrectly)
   else
    {
     alert('You failed to guess my state.');
-    if (guessCount === 5)
+    if (stateGuessQty === 5)
      {
       alert('Be careful!  You only have one more chance!!!');
     }
-    else if (guessCount === 6)
+    else if (stateGuessQty === 6)
      {
-      alert('You\'re not very good at this are you?? You have run out of guesses.');
+      alert('You\'re not very good at this are you?? You have run out of guesses. The possible answers were: California, Hawaii, Oregon, Texas, Virginia, and Wisconsin');
     }
   }
-}
+} //end while loop for state game
 
 //Score
