@@ -9,11 +9,13 @@ var outOfCountryQ = 'Have I ever been out of the country?';
 var correctAnswers = 0;
 var guestName = prompt('Please enter your name!');
 var text1, text2, text3, text4, text5;
+/* Personal Questions
 //Question Number 1
 var marriedAns = prompt(marriedQ);
 console.log('Answer1 = ' + marriedAns);
 if (marriedAns.toUpperCase() === 'YES' || marriedAns.toUpperCase() === 'Y')
   {
+  correctAnswers++;
   alert('You are right ' + guestName + '! I have been married to my wife for 21 years.');
   text1 = document.getElementById('marriedAns');
   text1.textContent = 'You are right! I have been married to my wife for 21 years.';
@@ -33,6 +35,7 @@ var haveKidsAns = prompt(haveKidsQ);
 console.log('Answer2 = ' + haveKidsAns);
 if (haveKidsAns.toUpperCase() === 'YES' || haveKidsAns.toUpperCase() === 'Y')
   {
+  correctAnswers++;
   alert('You are correct ' + guestName + '!  I have a son and a daughter.');
   text2 = document.getElementById('haveKidsAns');
   text2.textContent = 'You are correct ' + guestName + '! I have a son and a daughter.';
@@ -57,6 +60,7 @@ if (schoolSportsAns.toUpperCase() === 'YES' || schoolSportsAns.toUpperCase() ===
   text3.textContent = 'Sorry to disappoint.  I did not participate in school sports.';
 }
 else if (schoolSportsAns.toUpperCase() === 'NO' || schoolSportsAns.toUpperCase() === 'N'){
+  correctAnswers++;
   alert('Affirmative ' + guestName + '! I did not participate in school sports.');
   text3 = document.getElementById('schoolSportsAns');
   text3.textContent = 'Affirmative!  I did not participate in school sports.';
@@ -71,6 +75,7 @@ var kidsGoneAns = prompt(kidsGoneQ);
 console.log('Answer4 = ' + kidsGoneAns);
 if (kidsGoneAns.toUpperCase() === 'YES' || kidsGoneAns.toUpperCase() === 'Y')
   {
+  correctAnswers++;
   alert('Hell yeah ' + guestName + '! My daughter is 19 and currently attending WSU!');
   text4 = document.getElementById('kidsGoneAns');
   text4.textContent = 'Hell yeah!  My daughter is 19 and currently attending WSU!';
@@ -90,6 +95,7 @@ var outOfCountryAns = prompt(outOfCountryQ);
 console.log('Answer5 = ' + haveKidsAns);
 if (outOfCountryAns.toUpperCase() === 'YES' || outOfCountryAns.toUpperCase() === 'Y')
   {
+  correctAnswers++;
   alert('Yes  ' + guestName + ', I have.  I have set foot in Mexico, Spain, Afghanistan, Iraq, Kyrgyzstan, Ireland, Kuwait, and Canada.');
   text5 = document.getElementById('outOfCountryAns');
   text5.textContent = 'Yes I have.  I have set foot in Mexico, Spain, Afghanistan, Iraq, Kyrgyzstan, Ireland, Kuwait, and Canada.';
@@ -104,22 +110,42 @@ else {
   text5 = document.getElementById('outOfCountryAns');
   text5.textContent = 'You have not entered your answer in the proper format.';
 }
-//Question Number 6
-var targetNum =  5; //Math.floor(Math.random() * 10) + 1;
+console.log(correctAnswers);
+*/
+
+/*/ Number Guessing  //Question Number 6
+var targetNum =  Math.floor(Math.random() * 10) + 1;
 var guessCount = 0;
-var guess;
-while (guess !== targetNum && guessCount < 4)
+var guessInt;
+while (guessCount < 4)
 {
-  guess = prompt('Can you read my mind?  Please guess a number between 1 and 10');
-  console.log('User guess: ' + guess);
+  var userGuess = prompt('Can you read my mind?  Please guess a number between 1 and 10.  You only have 4 chances to get this right!!');
+  console.log('Target Number: ' + targetNum);
+  console.log('User guess: ' + userGuess);
   guessCount++;
-  console.log('Current Guess: ' + guessCount);
-  if (guess.parseInt() === targetNum)
+  console.log('Guess Count: ' + guessCount);
+  guessInt = parseInt(userGuess);
+  if (guessInt === targetNum)
   {
-    alert('Congratulations!!! You must be psychic!!')
+    alert('Congratulations!!! You must be psychic!!');
     correctAnswers++;
+    break;
   }
-}
-//Question Number 7
+  else {
+    alert('You failed to guess my number.  Try again.');
+    if (guessCount === 3) {
+      alert('Be careful!  You only have one more chance!!!');
+    }
+    else if (guessCount === 4)
+    {
+      alert('You\'re not very good at this are you?? You have run out of guesses.');
+    }
+  }
+}  */
+
+//Question Number 7 Guess the State
+
+var possAnswers = ['Virginia', 'Hawaii', 'Texas', 'California', 'Oregon', 'Wisconsin'];
+
 
 //Score
