@@ -7,7 +7,7 @@ var kidsGoneQ = 'Are my kids out of the house?';
 var outOfCountryQ = 'Have I ever been out of the country?';
 
 var correctAnswers = 0;
-var guestName = prompt('Please enter your name!');
+//var guestName = prompt('Please enter your name!');
 var text1, text2, text3, text4, text5;
 /* Personal Questions
 //Question Number 1
@@ -113,7 +113,8 @@ else {
 console.log(correctAnswers);
 */
 
-//*/ Number Guessing  //Question Number 6
+// Number Guessing  //Question Number 6
+/*
 var targetNum = Math.floor(Math.random() * 10) + 1;
 var guessCount = 0;
 var guessInt;
@@ -141,10 +142,10 @@ while (guessCount < 4)
       alert('You\'re not very good at this are you?? You have run out of guesses.');
     }
   }
-}  //*/
+}  */
 
 //Question Number 7 Guess the State
-
+/*
 var possAnswers = ['virginia', 'hawaii', 'texas', 'california', 'oregon', 'wisconsin'];
 var stateGuessQty = 0;
 var answeredCorrectly = false;
@@ -179,6 +180,6 @@ while (stateGuessQty < 6 && !answeredCorrectly)
       alert('You\'re not very good at this are you?? You have run out of guesses. The possible answers were: California, Hawaii, Oregon, Texas, Virginia, and Wisconsin');
     }
   }
-} //end while loop for state game
-
+}   //end while loop for state game
+*/
 //Score

@@ -1,3 +1,13 @@
+body {
+
+}
+ul ol {
+  width: 45%;
+  float: left;
+}
+li {
+  font-weight: bold;
+}
 
 p {
   color: black;
