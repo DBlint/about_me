@@ -107,104 +107,109 @@ function question4() {
 }
 question4();
 //Question Number 5
-var outOfCountryAns = prompt(outOfCountryQ);
-console.log('Answer5 = ' + haveKidsAns);
-if (outOfCountryAns.toUpperCase() === 'YES' || outOfCountryAns.toUpperCase() === 'Y')
-  {
-  correctAnswers++;
-  alert('Yes  ' + guestName + ', I have.  I have set foot in Mexico, Spain, Afghanistan, Iraq, Kyrgyzstan, Ireland, Kuwait, and Canada.');
-  text5 = document.getElementById('outOfCountryAns');
-  text5.textContent = 'Yes I have.  I have set foot in Mexico, Spain, Afghanistan, Iraq, Kyrgyzstan, Ireland, Kuwait, and Canada.';
+function question5() {
+  var outOfCountryAns = prompt(outOfCountryQ);
+  console.log('Answer5 = ' + haveKidsAns);
+  if (outOfCountryAns.toUpperCase() === 'YES' || outOfCountryAns.toUpperCase() === 'Y')
+    {
+    correctAnswers++;
+    alert('Yes  ' + guestName + ', I have.  I have set foot in Mexico, Spain, Afghanistan, Iraq, Kyrgyzstan, Ireland, Kuwait, and Canada.');
+    text5 = document.getElementById('outOfCountryAns');
+    text5.textContent = 'Yes I have.  I have set foot in Mexico, Spain, Afghanistan, Iraq, Kyrgyzstan, Ireland, Kuwait, and Canada.';
+  }
+  else if (outOfCountryAns.toUpperCase() === 'NO' || outOfCountryAns.toUpperCase() === 'N'){
+    alert('Actually ' + guestName + ', my time in the Army allowed me to visit several countries.');
+    text5 = document.getElementById('outOfCountryAns');
+    text5.textContent = 'Actually, my time in the Army allowed me to visit several countries.';
+  }
+  else {
+    alert('Please enter Y/N or Yes/No for an answer.');
+    text5 = document.getElementById('outOfCountryAns');
+    text5.textContent = 'You have not entered your answer in the proper format.';
+  }
 }
-else if (outOfCountryAns.toUpperCase() === 'NO' || outOfCountryAns.toUpperCase() === 'N'){
-  alert('Actually ' + guestName + ', my time in the Army allowed me to visit several countries.');
-  text5 = document.getElementById('outOfCountryAns');
-  text5.textContent = 'Actually, my time in the Army allowed me to visit several countries.';
-}
-else {
-  alert('Please enter Y/N or Yes/No for an answer.');
-  text5 = document.getElementById('outOfCountryAns');
-  text5.textContent = 'You have not entered your answer in the proper format.';
-}
+question5();
 console.log(correctAnswers);
 
 // Number Guessing  //Question Number 6
-
-var targetNum = Math.floor(Math.random() * 10) + 1;
-var guessCount = 0;
-var guessInt;
-while (guessCount < 4)
-{
-  var userGuess = prompt('Can you read my mind?  Please guess a number between 1 and 10.  You only have 4 chances to get this right!!');
-  console.log('Target Number: ' + targetNum);
-  console.log('User guess: ' + userGuess);
-  guessCount++;
-  console.log('Guess Count: ' + guessCount);
-  guessInt = parseInt(userGuess);
-  if (guessInt === targetNum)
+function question6() {
+  var targetNum = Math.floor(Math.random() * 10) + 1;
+  var guessCount = 0;
+  var guessInt;
+  while (guessCount < 4)
   {
-    alert('Congratulations!!! You must be psychic!!');
-    correctAnswers++;
-    var magicNumText = document.getElementById('magicNumAns');
-    magicNumText.textContent = 'Well played, I am indeed thinking of ' + targetNum + '!';
-    break;
-  }
-  else {
-    alert('You failed to guess my number.  Try again.');
-    if (guessCount === 3) {
-      alert('Be careful!  You only have one more chance!!!');
-    }
-    else if (guessCount === 4)
+    var userGuess = prompt('Can you read my mind?  Please guess a number between 1 and 10.  You only have 4 chances to get this right!!');
+    console.log('Target Number: ' + targetNum);
+    console.log('User guess: ' + userGuess);
+    guessCount++;
+    console.log('Guess Count: ' + guessCount);
+    guessInt = parseInt(userGuess);
+    if (guessInt === targetNum)
     {
-      alert('You\'re not very good at this are you?? You have run out of guesses.');
+      alert('Congratulations!!! You must be psychic!!');
+      correctAnswers++;
       var magicNumText = document.getElementById('magicNumAns');
-      magicNumText.textContent = 'Sorry, my friend none of those answers were ' + targetNum + '.';
+      magicNumText.textContent = 'Well played, I am indeed thinking of ' + targetNum + '!';
+      break;
+    }
+    else {
+      alert('You failed to guess my number.  Try again.');
+      if (guessCount === 3) {
+        alert('Be careful!  You only have one more chance!!!');
+      }
+      else if (guessCount === 4)
+      {
+        alert('You\'re not very good at this are you?? You have run out of guesses.');
+        var magicNumText = document.getElementById('magicNumAns');
+        magicNumText.textContent = 'Sorry, my friend none of those answers were ' + targetNum + '.';
+      }
     }
   }
 }
-
+question6();
 //Question Number 7 Guess the State
-
-var possAnswers = ['virginia', 'hawaii', 'texas', 'california', 'oregon', 'wisconsin'];
-var stateGuessQty = 0;
-var answeredCorrectly = false;
-while (stateGuessQty < 6 && !answeredCorrectly)
-{
-  var stateGuess = prompt('Try to guess one of the other states I have lived in.');
-  console.log('User State Input: ' + stateGuess);
-  stateGuessQty++;
-  console.log('Number of Attempts-States: ' + stateGuessQty);
-  for (var i = 0; i < possAnswers.length; i++)
+function quesetion7() {
+  var possAnswers = ['virginia', 'hawaii', 'texas', 'california', 'oregon', 'wisconsin'];
+  var stateGuessQty = 0;
+  var answeredCorrectly = false;
+  while (stateGuessQty < 6 && !answeredCorrectly)
   {
-    if (stateGuess.toLowerCase() === possAnswers[i])
+    var stateGuess = prompt('Try to guess one of the other states I have lived in.');
+    console.log('User State Input: ' + stateGuess);
+    stateGuessQty++;
+    console.log('Number of Attempts-States: ' + stateGuessQty);
+    for (var i = 0; i < possAnswers.length; i++)
     {
-      answeredCorrectly = true;
-      break;
+      if (stateGuess.toLowerCase() === possAnswers[i])
+      {
+        answeredCorrectly = true;
+        break;
+      }
     }
-  }
-  if (answeredCorrectly)
-    {
-    correctAnswers++;
-    alert('Amazing work! The possible answers were: California, Hawaii, Oregon, Texas, Virginia, and Wisconsin');
-    var stateAnsText = document.getElementById('stateAns');
-    stateAnsText.textContent = 'Well played, I indeed have also lived in ' + stateGuess.toUpperCase() + '!';
-  }
-  else
-   {
-    alert('You failed to guess my state.');
-    if (stateGuessQty === 5)
-     {
-      alert('Be careful!  You only have one more chance!!!');
-    }
-    else if (stateGuessQty === 6)
-     {
-      alert('You\'re not very good at this are you?? You have run out of guesses. The possible answers were: California, Hawaii, Oregon, Texas, Virginia, and Wisconsin');
+    if (answeredCorrectly)
+      {
+      correctAnswers++;
+      alert('Amazing work! The possible answers were: California, Hawaii, Oregon, Texas, Virginia, and Wisconsin');
       var stateAnsText = document.getElementById('stateAns');
-      stateAnsText.textContent = 'Well friend, you were not able to guess any of the states I have lived in.  They were: California, Hawaii, Oregon, Texas, Virginia, and Wisconsin';
+      stateAnsText.textContent = 'Well played, I indeed have also lived in ' + stateGuess.toUpperCase() + '!';
     }
-  }
-}   //end while loop for state game
-
+    else
+     {
+      alert('You failed to guess my state.');
+      if (stateGuessQty === 5)
+       {
+        alert('Be careful!  You only have one more chance!!!');
+      }
+      else if (stateGuessQty === 6)
+       {
+        alert('You\'re not very good at this are you?? You have run out of guesses. The possible answers were: California, Hawaii, Oregon, Texas, Virginia, and Wisconsin');
+        var stateAnsText = document.getElementById('stateAns');
+        stateAnsText.textContent = 'Well friend, you were not able to guess any of the states I have lived in.  They were: California, Hawaii, Oregon, Texas, Virginia, and Wisconsin';
+      }
+    }
+  }   //end while loop for state game
+}
+quesetion7();
 //Score
 if (correctAnswers < 4)
 {
