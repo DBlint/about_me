@@ -1,45 +1,80 @@
+* {
+  color: #1a2553;
+}
+
+html {
+  height: 100%;
+}
+
 body {
-  color: rgb(108,72,17);
-}
-.background {
-  background-color: rgba(10,82,19,.9)
-  /*background-image: url("https://cdn.itead.cc/media/wysiwyg/PCB/PCB_banner1.jpg");*/
-  /*height: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;*/
-}
-h1{
-  color: white;
-}
-.bio {
-  background-color: rgba(0,0,0,0.7);
-  width: 50%;
-  font-style: italic;
-}
-.title {
-  color: white;
-  font-size: 1.5em;
+  min-height: 100%;
+  width: 100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+18,0+100 */
+background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.65) 18%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 18%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 18%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 }
 
-ul ol {
-  width: 45%;
-  background-color: green;
+ul {
+  width: 40%;
+  /*background-color: lightgrey;*/
+  float: left;
 }
+
 li {
+  /*background-color: lightblue;*/
 }
 
-p {
+header {
+  background: #F0F2F0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #000C40, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #000C40, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  /*background-color: grey;*/
+  text-align: center;
+  /*opacity: 0.5;*/
+}
+
+#pageTitle {
   color: black;
-
 }
 
-.question {
-  color: green;
-  font-weight: bold;
+.personalInfo {
+  /*background-color: tan;*/
+  float: left;
+  width: 63%;
 }
 
-.answer {
-  color: blue;
+.list {
+  width: 50%;
+}
+
+.title {
+  color: black;
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+
+.displayBox {
+  padding-left: 20px;
+  /*background-color: lightgreen;*/
+  width: 40%;
+  height: 500px;
+  overflow: scroll;
+}
+
+.galleryImg {
+  padding-left: 10px;
+  opacity: 0.5;
+}
+
+.galleryImg:hover {
+  opacity: 1.0;
+}
+
+.game {
+  /*background-color: purple;*/
+  float: right;
+  width: 35%;
 }
