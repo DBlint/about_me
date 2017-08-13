@@ -40,6 +40,10 @@ background: linear-gradient(to right, #000C40, #F0F2F0); /* W3C, IE 10+/ Edge, F
   color: black;
 }
 
+.question {
+  font-size: 1.2em;
+}
+
 .personalInfo {
   /*background-color: tan;*/
   float: left;
