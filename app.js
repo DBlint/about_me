@@ -134,7 +134,7 @@ while (guessCount < 4)
     break;
   }
   else {
-    alert('You failed to guess my number.  Try again.');
+    alert('You failed to guess my number.');
     if (guessCount === 3) {
       alert('Be careful!  You only have one more chance!!!');
     }
@@ -190,7 +190,7 @@ while (stateGuessQty < 6 && !answeredCorrectly)
 }   //end while loop for state game
 
 //Score
-if (correctAnswers < 4)
+if (correctAnswers <= 4)
 {
   alert('Well, ' + guestName + ' it appears you don\'t know me very well, you only answered ' + correctAnswers + ' out of 7 correctly.');
 }
